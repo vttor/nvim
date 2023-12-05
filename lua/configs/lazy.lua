@@ -1,0 +1,89 @@
+-- https://github.com/folke/lazy.nvim
+
+-- lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+})
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Make sure to set `mapleader` before lazy so your mappings are correct
+vim.g.mapleader = " "
+
+-- Plugins
+require("lazy").setup({
+    spec = {
+
+        -- File Xxplorer
+        {
+            "nvim-tree/nvim-tree.lua",
+            version = "*",
+            lazy = false,
+            dependencies = {
+                {"nvim-tree/nvim-web-devicons"}
+            },
+        },
+
+        -- Icons
+        { 
+            "nvim-tree/nvim-web-devicons", 
+            lazy = true 
+        },
+
+        -- Autopairs
+        {
+            "windwp/nvim-autopairs",
+            event = "InsertEnter",
+            config = function()
+                require("nvim-autopairs").setup{}
+            end
+        },
+
+        -- Blankline
+        { 
+            "lukas-reineke/indent-blankline.nvim", 
+            main = "ibl",
+            opts = {},
+        },
+
+        -- Theme
+        { 
+            "catppuccin/nvim", 
+            name = "catppuccin", 
+            priority = 1000 
+        },
+
+        -- Lualine
+        {
+            "nvim-lualine/lualine.nvim",
+            dependencies = {"nvim-tree/nvim-web-devicons"}
+        },
+
+        ---  LSP
+        {"neovim/nvim-lspconfig"},
+
+        -- Autocomplete
+        {
+            "hrsh7th/nvim-cmp",
+            event = {
+                "InsertEnter",
+                "CmdlineEnter"
+            },
+            dependencies = {
+                "hrsh7th/cmp-nvim-lsp",
+                "hrsh7th/cmp-buffer",
+                "hrsh7th/cmp-path",
+                "hrsh7th/cmp-cmdline",
+                "saadparwaiz1/cmp_luasnip",
+                "L3MON4D3/LuaSnip"
+            }
+        }
+    }
+})

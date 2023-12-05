@@ -1,0 +1,1 @@
+This is an initial configuration for Neovim, intended to serve as a starting point.
