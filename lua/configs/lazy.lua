@@ -31,6 +31,12 @@ require("lazy").setup({
             },
         },
 
+        {
+            'akinsho/bufferline.nvim', 
+            version = "*", 
+            dependencies = 'nvim-tree/nvim-web-devicons'
+        },
+
         -- Icons
         { 
             "nvim-tree/nvim-web-devicons", 
