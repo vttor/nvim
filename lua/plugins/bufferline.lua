@@ -19,9 +19,9 @@ require('bufferline').setup{
         offsets = {
             {
                 filetype = "NvimTree",
-                text = "Explorer",
-                text_align = "center",
-                separator = true
+                text = "",
+                text_align = "",
+                separator = false
             }
         },
         color_icons = true,

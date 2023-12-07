@@ -2,15 +2,45 @@
 
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
+    disable_netrw = true,
+    hijack_netrw = true,
+    hijack_cursor = true,
+    hijack_unnamed_buffer_when_opening = false,
+    sync_root_with_cwd = true,
+    update_focused_file = {
+        enable = true,
+        update_root = false,
+    },
     view = {
-      width = 40,
+        width = 30,
+        side = 'left',
+        preserve_window_proportions = true,
     },
     renderer = {
-      group_empty = true,
+        root_folder_label = false,
+        group_empty = true,
+    },
+    git = {
+        enable = false,
+        ignore = true,
+    },
+    update_focused_file = {
+        enable = true,
+        update_cwd = false,
+        ignore_list = {},
     },
     filters = {
-      dotfiles = true,
+        dotfiles = false
     },
+    actions = {
+        open_file = {
+            quit_on_open = false,
+            window_picker = {
+                enable = true,
+            },
+            resize_window = true
+        },
+    }
 })
 
 vim.cmd([[autocmd VimEnter * NvimTreeOpen]])

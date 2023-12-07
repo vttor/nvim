@@ -14,14 +14,14 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to set `mapleader` before lazy so your mappings are correct
+-- make sure to set `mapleader` before lazy so your mappings are correct
 vim.g.mapleader = " "
 
--- Plugins
+-- plugins
 require("lazy").setup({
     spec = {
 
-        -- File Xxplorer
+        -- file explorer
         {
             "nvim-tree/nvim-tree.lua",
             version = "*",
@@ -31,19 +31,20 @@ require("lazy").setup({
             },
         },
 
+        -- bufferline
         {
             'akinsho/bufferline.nvim', 
             version = "*", 
             dependencies = 'nvim-tree/nvim-web-devicons'
         },
 
-        -- Icons
+        -- icons
         { 
             "nvim-tree/nvim-web-devicons", 
             lazy = true 
         },
 
-        -- Autopairs
+        -- autopairs
         {
             "windwp/nvim-autopairs",
             event = "InsertEnter",
@@ -52,30 +53,30 @@ require("lazy").setup({
             end
         },
 
-        -- Blankline
+        -- blankline
         { 
             "lukas-reineke/indent-blankline.nvim", 
             main = "ibl",
             opts = {},
         },
 
-        -- Theme
+        -- theme
         { 
             "catppuccin/nvim", 
             name = "catppuccin", 
             priority = 1000 
         },
 
-        -- Lualine
+        -- lualine
         {
             "nvim-lualine/lualine.nvim",
             dependencies = {"nvim-tree/nvim-web-devicons"}
         },
 
-        ---  LSP
+        ---  lsp
         {"neovim/nvim-lspconfig"},
 
-        -- Autocomplete
+        -- autocomplete
         {
             "hrsh7th/nvim-cmp",
             event = {
