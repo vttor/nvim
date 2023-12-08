@@ -40,8 +40,14 @@ require("lazy").setup({
 
         -- telescope
         {
-            'nvim-telescope/telescope.nvim', tag = '0.1.5',
-            dependencies = { 'nvim-lua/plenary.nvim' }
+            "nvim-telescope/telescope.nvim", tag = "0.1.5",
+            dependencies = { "nvim-lua/plenary.nvim" }
+        },
+
+        -- treesitter
+        {
+            "nvim-treesitter/nvim-treesitter", 
+            build = ":TSUpdate"
         },
 
         -- icons
