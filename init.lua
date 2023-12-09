@@ -3,6 +3,7 @@
 require 'configs.options'
 require 'configs.lazy'
 require 'configs.theme'
+require 'plugins.alpha'
 require 'plugins.lualine'
 require 'plugins.blankline'
 require 'plugins.nvim-tree'
