@@ -50,6 +50,12 @@ require("lazy").setup({
             build = ":TSUpdate"
         },
 
+        -- dashboard
+        {
+            'goolord/alpha-nvim',
+            dependencies = { 'nvim-tree/nvim-web-devicons' }
+        },
+
         -- icons
         { 
             "nvim-tree/nvim-web-devicons", 
@@ -65,7 +71,7 @@ require("lazy").setup({
             end
         },
 
-        -- blankline
+        -- indent line
         { 
             "lukas-reineke/indent-blankline.nvim", 
             main = "ibl",
