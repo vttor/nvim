@@ -62,6 +62,8 @@ local root_dir = function()
     return vim.fn.getcwd()
 end
 
+-- servers
+
 require'lspconfig'.clangd.setup {
     capabilities = capabilities,
     filetypes = { "c", "cpp" },
@@ -74,6 +76,9 @@ require'lspconfig'.clangd.setup {
 require'lspconfig'.tsserver.setup {
     capabilities = capabilities,
     root_dir = root_dir,
+    flags = {
+        debounce_text_changes = 150,
+    },
     cmd = { "typescript-language-server", "--stdio" },
     filetypes = { 
         "javascript", 
