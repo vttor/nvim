@@ -14,8 +14,11 @@ require('telescope').setup {
         },
         mappings = {},
         layout_strategy = "horizontal",
+        sorting_strategy = "ascending",
+        selection_strategy = "reset",
         layout_config = {
             horizontal = {
+                prompt_position = "top",
                 size = {
                     width = "90%",
                     height = "60%",
