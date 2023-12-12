@@ -38,6 +38,12 @@ require("lazy").setup({
             dependencies = 'nvim-tree/nvim-web-devicons'
         },
 
+        -- gitsigns
+        {
+            "lewis6991/gitsigns.nvim",
+            dependencies = {"nvim-lua/plenary.nvim"}
+        },
+
         -- telescope
         {
             "nvim-telescope/telescope.nvim", tag = "0.1.5",
