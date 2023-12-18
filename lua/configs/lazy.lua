@@ -37,6 +37,13 @@ require("lazy").setup({
             version = "*", 
             dependencies = 'nvim-tree/nvim-web-devicons'
         },
+        
+        -- theme
+        { 
+            "catppuccin/nvim", 
+            name = "catppuccin", 
+            priority = 1000 
+        },
 
         -- gitsigns
         {
@@ -54,6 +61,12 @@ require("lazy").setup({
         {
             "nvim-treesitter/nvim-treesitter", 
             build = ":TSUpdate"
+        },
+
+        -- comment
+        {
+            'numToStr/Comment.nvim',
+            lazy = false
         },
 
         -- dashboard
@@ -82,13 +95,6 @@ require("lazy").setup({
             "lukas-reineke/indent-blankline.nvim", 
             main = "ibl",
             opts = {},
-        },
-
-        -- theme
-        { 
-            "catppuccin/nvim", 
-            name = "catppuccin", 
-            priority = 1000 
         },
 
         -- lualine
