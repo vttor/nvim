@@ -8,6 +8,7 @@ This is an initial configuration for Neovim, intended to serve as a starting poi
 - [bufferline](https://github.com/akinsho/bufferline.nvim)
 - [catppuccin](https://github.com/catppuccin/nvim)
 - [cmp](https://github.com/hrsh7th/nvim-cmp)
+- [comment](https://github.com/numToStr/Comment.nvim)
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [lualine](https://github.com/nvim-lualine/lualine.nvim)
