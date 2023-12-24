@@ -1,8 +1,8 @@
 
 -- Modules
-require 'configs.options'
-require 'configs.lazy'
-require 'configs.theme'
+require 'core.options'
+require 'core.lazy'
+require 'core.theme'
 require 'plugins.alpha'
 require 'plugins.lualine'
 require 'plugins.blankline'
