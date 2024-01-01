@@ -21,7 +21,7 @@ require("nvim-tree").setup({
         group_empty = true,
     },
     git = {
-        enable = false,
+        enable = true,
         ignore = true,
     },
     update_focused_file = {

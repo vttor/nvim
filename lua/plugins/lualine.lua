@@ -6,7 +6,7 @@ require('lualine').setup {
         theme = 'nightfly',
         component_separators = '',
         section_separators = { left = '', right = '' },
-        disabled_filetypes = { 'alpha' },
+        -- disabled_filetypes = { 'alpha' },
         globalstatus = true,
         refresh = {
             statusline = 100,

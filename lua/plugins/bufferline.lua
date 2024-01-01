@@ -2,7 +2,7 @@
 
 require('bufferline').setup{
     options = {
-        mode = "buffers", -- set to "tabs" to only show tabpages instead
+        mode = "tabs", -- set to "tabs" to only show tabpages instead
         buffer_close_icon = '󰅖',
         modified_icon = '●',
         close_icon = '',
